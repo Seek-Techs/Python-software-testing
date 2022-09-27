@@ -74,7 +74,7 @@ def login():
         id = int(input("Enter your official id: "))
         password = input("Enter your official password: ")
 
-        if password ==  bank_model["officials"][id]["pasord"] 
+        if password ==  bank_model["officials"][id]["password"]: 
             msg = "Welcome back %s " % (bank_model["officials"][id]["name"])
             print(msg)
 
@@ -87,11 +87,11 @@ def login():
         password = input("Enter your account password: ")
     
         if password ==  bank_model["customers"][id]["password"] :
-            msg = "Welcome back %s\n Your current balance: $%s" % (bank_model["customers"][id]["account_name"], bank_mdel['customers'][id]["balane"])
+            msg = "Welcome back %s\n Your current balance: $%s" % (bank_model["customers"][id]["account_name"], bank_model['customers'][id]["balance"])
             print(msg)
 
-          elif password !=  bank_model["customers"][id]["password"]
+        elif password !=  bank_model["customers"][id]["password"]:
             print("password or id is invalid!!")
             login()
 
-ogin()
+login()
